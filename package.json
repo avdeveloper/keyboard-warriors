@@ -1,0 +1,14 @@
+{
+  "name": "keyboard-warriors",
+  "description": "Game that showcases how to test jQuery code with QUnit",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "ejs": "*",
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}
