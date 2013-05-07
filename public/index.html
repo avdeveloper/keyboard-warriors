@@ -1,5 +1,10 @@
 <link href="css/style.css" rel="stylesheet" type="text/css">
-<div id="pinboard">
-  <p style="-webkit-transform: rotate(-6deg);">world</p>
+<link rel="stylesheet" href="http://github.com/jquery/qunit/raw/master/qunit/qunit.css" type="text/css" media="screen">
+<div id="pinboard" data-bind="template: { name: 'wordsTemplate', foreach: words, as: 'word', afterAdd: pinIt }">
 </div>
 <input id="entry" type="text">
+<script id="wordsTemplate" type="text/html">
+  <p data-bind="text: word"></p>
+</script>
+<script type="text/javascript" data-main="js/main.js" src="//cdnjs.cloudflare.com/ajax/libs/require-jquery/0.25.0/require-jquery.min.js"></script>
+<script type="text/javascript" src=""></script>
