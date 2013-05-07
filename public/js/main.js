@@ -5,6 +5,9 @@ require.config({
   }
 });
 
-require(["jquery", "knockout", "ViewModel"], function (jquery, ko, ViewModel) {
-  ko.applyBindings(ViewModel);
+require(["jquery", "knockout", "ViewModel", "Tests"], function (jquery, ko, ViewModel, Tests) {
+  $(function () {
+    ko.applyBindings(ViewModel);
+    Tests.run();
+  });
 });
