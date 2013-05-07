@@ -2,7 +2,8 @@
 <link rel="stylesheet" href="http://github.com/jquery/qunit/raw/master/qunit/qunit.css" type="text/css" media="screen">
 <div id="pinboard" data-bind="template: { name: 'wordsTemplate', foreach: words, as: 'word', afterAdd: pinIt }">
 </div>
-<input id="entry" type="text">
+<input id="entry" type="text" data-bind="value: entry">
+<button data-bind="click: addItem">Add</button>
 <section id="debug">
   <h1 id="qunit-header">QUnit Test Suite</h1>
   <h2 id="qunit-banner"></h2>  

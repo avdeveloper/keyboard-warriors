@@ -2,6 +2,7 @@ define(["jquery", "knockout", "Word"], function ($, ko, Word) {
   var
   
   words = ko.observableArray([]),
+  entry = ko.observable(""),
   
   /**
    * Place a newly created element randomly onto the pinboard
@@ -26,12 +27,14 @@ define(["jquery", "knockout", "Word"], function ($, ko, Word) {
    * Adds a new item to the array of objects pinned to the board
    */
   addItem = function () {
-    words.push(new Word("world", this.parent));
+    words.push(new Word(entry(), this.parent));
+    // entry("");
   };
 
   return {
     words: words,
     pinIt: pinIt,
-    addItem: addItem
+    addItem: addItem,
+    entry: entry
   }
 });
