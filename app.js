@@ -1,5 +1,4 @@
 var express = require("express"),
-    atob = require("atob"),
     app = module.exports = express();
 
 app.use(express.static("public"));
